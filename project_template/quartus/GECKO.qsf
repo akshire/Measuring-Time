@@ -1,0 +1,625 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+# Date created = 09:37:49  January 29, 2018
+#
+# -------------------------------------------------------------------------- #
+
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[0] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[1] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[2] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[3] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[4] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[5] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[6] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_GREEN[7] -section_id LED_GREEN[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER KEY_N[0] -section_id KEY_N[0..1]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER KEY_N[1] -section_id KEY_N[0..1]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW[0] -section_id SW[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW[1] -section_id SW[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW[2] -section_id SW[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW[3] -section_id SW[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_BA[0] -section_id DRAM_BA[0..1]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_BA[1] -section_id DRAM_BA[0..1]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQM[0] -section_id DRAM_DQM[0..1]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQM[1] -section_id DRAM_DQM[0..1]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[0] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[1] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[2] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[3] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[4] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[5] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[6] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[7] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[8] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[9] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[10] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[11] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[12] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[13] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[14] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_DQ[15] -section_id DRAM_DQ[0..15]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[0] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[1] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[2] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[3] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[4] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[5] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[6] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[7] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[8] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[9] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[10] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[11] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DRAM_ADDR[12] -section_id DRAM_ADDR[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[0] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[1] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[2] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[3] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[4] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[5] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[6] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[7] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[8] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[9] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[10] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[11] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D[12] -section_id GPIO_2_D[0..12]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D_IN[0] -section_id GPIO_2_D_IN[0..2]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D_IN[1] -section_id GPIO_2_D_IN[0..2]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER GPIO_2_D_IN[2] -section_id GPIO_2_D_IN[0..2]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[0] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[1] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[2] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[3] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[4] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[5] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[6] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[7] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[8] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[9] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[10] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_C_N[11] -section_id LED_SEL_C_N[0..11]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[0] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[1] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[2] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[3] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[4] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[5] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[6] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_A[7] -section_id SW_LED_A[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[0] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[1] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[2] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[3] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[4] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[5] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[6] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER SW_LED_B[7] -section_id SW_LED_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER BUTTON_N[0] -section_id BUTTON_N[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER BUTTON_N[1] -section_id BUTTON_N[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER BUTTON_N[2] -section_id BUTTON_N[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER BUTTON_N[3] -section_id BUTTON_N[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[0] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[1] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[2] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[3] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[4] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[5] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[6] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_R[7] -section_id LED_SEL_R[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[0] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[1] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[2] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[3] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[4] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[5] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[6] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_G[7] -section_id LED_SEL_G[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[0] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[1] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[2] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[3] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[4] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[5] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[6] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_SEL_B[7] -section_id LED_SEL_B[0..7]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_BUTTON[0] -section_id LED_BUTTON[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_BUTTON[1] -section_id LED_BUTTON[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_BUTTON[2] -section_id LED_BUTTON[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER LED_BUTTON[3] -section_id LED_BUTTON[0..3]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER MSEL[0] -section_id MSEL[0..2]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER MSEL[1] -section_id MSEL[0..2]
+set_global_assignment -name ASSIGNMENT_GROUP_MEMBER MSEL[2] -section_id MSEL[0..2]
+
+# Copyright (C) 1991-2007 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		system_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE30F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY GECKO
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:45:14  JANUARY 29, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name SMART_RECOMPILE ON
+set_location_assignment PIN_T1 -to clk
+set_location_assignment PIN_AB11 -to reset_n
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_D6 -to out_LEDs[0]
+set_location_assignment PIN_E5 -to out_LEDs[1]
+set_location_assignment PIN_B5 -to out_LEDs[2]
+set_location_assignment PIN_C4 -to out_LEDs[3]
+set_location_assignment PIN_A4 -to out_LEDs[4]
+set_location_assignment PIN_C3 -to out_LEDs[5]
+set_location_assignment PIN_B3 -to out_LEDs[6]
+set_location_assignment PIN_A3 -to out_LEDs[7]
+set_location_assignment PIN_F19 -to out_LEDs[8]
+set_location_assignment PIN_F8 -to out_LEDs[9]
+set_location_assignment PIN_G8 -to out_LEDs[10]
+set_location_assignment PIN_E7 -to out_LEDs[11]
+set_location_assignment PIN_C7 -to out_LEDs[12]
+set_location_assignment PIN_A5 -to out_LEDs[13]
+set_location_assignment PIN_C6 -to out_LEDs[14]
+set_location_assignment PIN_B6 -to out_LEDs[15]
+set_location_assignment PIN_F10 -to out_LEDs[16]
+set_location_assignment PIN_G10 -to out_LEDs[17]
+set_location_assignment PIN_H10 -to out_LEDs[18]
+set_location_assignment PIN_G9 -to out_LEDs[19]
+set_location_assignment PIN_A8 -to out_LEDs[20]
+set_location_assignment PIN_B7 -to out_LEDs[21]
+set_location_assignment PIN_A7 -to out_LEDs[22]
+set_location_assignment PIN_C8 -to out_LEDs[23]
+set_location_assignment PIN_K18 -to out_LEDs[24]
+set_location_assignment PIN_F11 -to out_LEDs[25]
+set_location_assignment PIN_E11 -to out_LEDs[26]
+set_location_assignment PIN_H11 -to out_LEDs[27]
+set_location_assignment PIN_A10 -to out_LEDs[28]
+set_location_assignment PIN_B9 -to out_LEDs[29]
+set_location_assignment PIN_A9 -to out_LEDs[30]
+set_location_assignment PIN_C10 -to out_LEDs[31]
+set_location_assignment PIN_E10 -to out_LEDs[32]
+set_location_assignment PIN_E9 -to out_LEDs[33]
+set_location_assignment PIN_G7 -to out_LEDs[34]
+set_location_assignment PIN_F7 -to out_LEDs[35]
+set_location_assignment PIN_A14 -to out_LEDs[36]
+set_location_assignment PIN_C13 -to out_LEDs[37]
+set_location_assignment PIN_B13 -to out_LEDs[38]
+set_location_assignment PIN_A13 -to out_LEDs[39]
+set_location_assignment PIN_G14 -to out_LEDs[40]
+set_location_assignment PIN_J18 -to out_LEDs[41]
+set_location_assignment PIN_G13 -to out_LEDs[42]
+set_location_assignment PIN_K17 -to out_LEDs[43]
+set_location_assignment PIN_A16 -to out_LEDs[44]
+set_location_assignment PIN_C15 -to out_LEDs[45]
+set_location_assignment PIN_B15 -to out_LEDs[46]
+set_location_assignment PIN_A15 -to out_LEDs[47]
+set_location_assignment PIN_G15 -to out_LEDs[48]
+set_location_assignment PIN_H14 -to out_LEDs[49]
+set_location_assignment PIN_D10 -to out_LEDs[50]
+set_location_assignment PIN_F9 -to out_LEDs[51]
+set_location_assignment PIN_A18 -to out_LEDs[52]
+set_location_assignment PIN_C17 -to out_LEDs[53]
+set_location_assignment PIN_B17 -to out_LEDs[54]
+set_location_assignment PIN_A17 -to out_LEDs[55]
+set_location_assignment PIN_G16 -to out_LEDs[56]
+set_location_assignment PIN_H15 -to out_LEDs[57]
+set_location_assignment PIN_J17 -to out_LEDs[58]
+set_location_assignment PIN_E12 -to out_LEDs[59]
+set_location_assignment PIN_B20 -to out_LEDs[60]
+set_location_assignment PIN_C19 -to out_LEDs[61]
+set_location_assignment PIN_B19 -to out_LEDs[62]
+set_location_assignment PIN_A19 -to out_LEDs[63]
+set_location_assignment PIN_F14 -to out_LEDs[64]
+set_location_assignment PIN_G17 -to out_LEDs[65]
+set_location_assignment PIN_H16 -to out_LEDs[66]
+set_location_assignment PIN_E13 -to out_LEDs[67]
+set_location_assignment PIN_B22 -to out_LEDs[68]
+set_location_assignment PIN_A20 -to out_LEDs[69]
+set_location_assignment PIN_C21 -to out_LEDs[70]
+set_location_assignment PIN_B21 -to out_LEDs[71]
+set_location_assignment PIN_J22 -to out_LEDs[72]
+set_location_assignment PIN_J21 -to out_LEDs[73]
+set_location_assignment PIN_H19 -to out_LEDs[74]
+set_location_assignment PIN_H17 -to out_LEDs[75]
+set_location_assignment PIN_E22 -to out_LEDs[76]
+set_location_assignment PIN_D20 -to out_LEDs[77]
+set_location_assignment PIN_D21 -to out_LEDs[78]
+set_location_assignment PIN_D22 -to out_LEDs[79]
+set_location_assignment PIN_K21 -to out_LEDs[80]
+set_location_assignment PIN_F15 -to out_LEDs[81]
+set_location_assignment PIN_E15 -to out_LEDs[82]
+set_location_assignment PIN_D15 -to out_LEDs[83]
+set_location_assignment PIN_H21 -to out_LEDs[84]
+set_location_assignment PIN_F20 -to out_LEDs[85]
+set_location_assignment PIN_F22 -to out_LEDs[86]
+set_location_assignment PIN_F21 -to out_LEDs[87]
+set_location_assignment PIN_D19 -to out_LEDs[88]
+set_location_assignment PIN_F17 -to out_LEDs[89]
+set_location_assignment PIN_D17 -to out_LEDs[90]
+set_location_assignment PIN_K22 -to out_LEDs[91]
+set_location_assignment PIN_L21 -to out_LEDs[92]
+set_location_assignment PIN_F16 -to out_LEDs[93]
+set_location_assignment PIN_E16 -to out_LEDs[94]
+set_location_assignment PIN_L22 -to out_LEDs[95]
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+
+
+
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_location_assignment PIN_B11 -to IN_BUTTONS[0]
+set_location_assignment PIN_A11 -to IN_BUTTONS[1]
+set_location_assignment PIN_B12 -to IN_BUTTONS[2]
+set_location_assignment PIN_A12 -to IN_BUTTONS[3]
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_GREEN_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_8
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_9
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_11
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_12
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_13
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_14
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ_15
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_8
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_9
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_11
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR_12
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EPCS_DATA0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EPCS_DCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EPCS_NCSO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EPCS_ASDO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to I2C_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to I2C_SDAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to G_SENSOR_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to G_SENSOR_INT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SADDR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SDAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_8
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_9
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_11
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_12
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_IN[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_IN_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_IN[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_IN_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_IN[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2_D_IN_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EXT_CLK_IN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EXT_CLK_OUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TP0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_RESET
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_8
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_9
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_C_N_11
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_A_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW_LED_B_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BUTTON_N_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SERIAL_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SERIAL_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TP1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_R_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_G_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_SEL_B_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_BUTTON_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to JOYSTICKN_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to JOYSTICKS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to JOYSTICKE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to JOYSTICKW_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to JOYSTICKC_N
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_AB15 -to rx
+set_location_assignment PIN_AA15 -to tx
+set_global_assignment -name QXP_FILE register_file.qxp
+set_global_assignment -name QXP_FILE mux2x32.qxp
+set_global_assignment -name QXP_FILE mux2x16.qxp
+set_global_assignment -name QXP_FILE IR.qxp
+set_global_assignment -name QXP_FILE mux2x5.qxp
+set_global_assignment -name QXP_FILE extend.qxp
+set_global_assignment -name QXP_FILE decoder.qxp
+set_global_assignment -name QXP_FILE controller.qxp
+set_global_assignment -name QXP_FILE ALU.qxp
+set_global_assignment -name VHDL_FILE ../vhdl/ROM_obfuscated.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/RAM_obfuscated.vhd
+set_global_assignment -name SDC_FILE GECKO.sdc
+set_global_assignment -name BDF_FILE GECKO.bdf
+set_global_assignment -name HEX_FILE ROM.hex
+set_global_assignment -name BDF_FILE CPU.bdf
+set_global_assignment -name VHDL_FILE ../vhdl/buttons.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/control_registers.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/LEDs.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/PC.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/RAM.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/ROM.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/ROM_Block.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/timer.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/uart.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
