@@ -45,15 +45,15 @@ timer_isr:
 	ret
 
 buttons_isr:
-	ldw t1, LEDs+8(zero)
+	ldw t1, LEDs(zero)
 	ldw t0, BUTTON+4(zero)
 	andi t0, t0, 1
-	add t1, t1, t0 ; increment counter for button 1
+	sub t1, t1, t0 ; increment counter for button 1
 	ldw t0, BUTTON+4(zero)
 	srli t0, t0, 1
 	andi t0, t0, 1
-	sub t1, t1, t0 ; decrement counter for button 2
-	stw t1, LEDs+8(zero)
+	add t1, t1, t0 ; decrement counter for button 2
+	stw t1, LEDs(zero)
 	stw zero, BUTTON+4(zero) ; acknowledge interrupt
 	ret
 
@@ -63,13 +63,13 @@ main:
 	wrctl ienable, t0 ; enable timer + button irq
 	addi t0, zero, 1
 	wrctl status, t0 ; enable interrupts
-	addi t0, zero, 99 ; set the period of the timer to 100 cycles
+	addi t0, zero, 999 ; set the period of the timer to 100 cycles
 	stw t0, TIMER+8(zero)
 	addi t0, zero, 7 ; start the timer:
 	stw t0, TIMER+4(zero) ; start + cont + ito
 	add t0, zero, zero ; init counter1
 
 	main_loop:
-		stw t0, LEDs(zero) ; display counter1
+		stw t0, LEDs+8(zero) ; display counter1
 		addi t0, t0, 1 ; increment counter1
 		br main_loop
