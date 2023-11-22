@@ -57,7 +57,7 @@ addi t0, zero, 5
 wrctl ienable, t0 ; enable timer + button irq
 addi t0, zero, 1
 wrctl status, t0 ; enable interrupts
-addi t0, zero, 99 ; set the period of the timer to 100 cycles
+addi t0, zero, 999 ; set the period of the timer to 1000 cycles
 stw t0, TIMER+8(zero)
 addi t0, zero, 7 ; start the timer:
 stw t0, TIMER+4(zero) ; start + cont + ito
