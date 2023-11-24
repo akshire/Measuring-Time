@@ -70,6 +70,7 @@ main:
 	add t0, zero, zero ; init counter1
 
 	main_loop:
+		
 		stw t0, LEDs+8(zero) ; display counter1
 		addi t0, t0, 1 ; increment counter1
 		br main_loop
