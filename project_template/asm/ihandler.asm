@@ -5,6 +5,7 @@
 
 start:
 br main
+; see if the slots are in the corresponding slots
 
 interrupt_handler:
 	addi sp, sp, -16 ; save to stack
@@ -63,10 +64,10 @@ main:
 	wrctl ienable, t0 ; enable timer + button irq
 	addi t0, zero, 1
 	wrctl status, t0 ; enable interrupts
-	addi t0, zero, 999 ; set the period of the timer to 100 cycles
-	stw t0, TIMER+8(zero)
-	addi t0, zero, 7 ; start the timer:
-	stw t0, TIMER+4(zero) ; start + cont + ito
+	addi t0, zero, 999 ; set the period of the timer to 1000 cycles
+	stw t0, TIMER+4(zero)
+	addi t0, zero, 11 ; start the timer:
+	stw t0, TIMER+8(zero) ; start + cont + ito
 	add t0, zero, zero ; init counter1
 
 	main_loop:
