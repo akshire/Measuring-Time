@@ -117,7 +117,7 @@ begin
 					when REG_CONTROL =>
 						
 						if (wrdata(2) = '1') then
-							
+			
 							run <= '0';
 						elsif (wrdata(3) = '1') then
 							
