@@ -1,0 +1,64 @@
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
++----------------------------------------------------------------------------+
+; Quartus Prime QXP Design File                                              ;
++------------------+---------------------------------------------------------+
+; Field            ; Value                                                   ;
++------------------+---------------------------------------------------------+
+; Entity           ; controller                                              ;
+; Case Sensitive   ;                                                         ;
+; QXP Source       ; controller.qxp                                          ;
+; Software Version ; Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Date             ; Tue Mar  6 12:04:54 2018                                ;
+; Contents         ; Netlist Only                                            ;
+; Family           ; EP4CE30F23C8                                            ;
+; Device           ; CYCLONEIVE3_V1F484C8                                    ;
++------------------+---------------------------------------------------------+
+
++-------------------------------------------+
+; Boundary Ports                            ;
++------------------+--------+---------------+
+; Port Name        ; Type   ; Default Value ;
++------------------+--------+---------------+
+; clk              ; input  ; 0             ;
+; reset_n          ; input  ; 0             ;
+; ipending         ; input  ; 0             ;
+; op [5:0]         ; input  ; 000000        ;
+; opx [5:0]        ; input  ; 000000        ;
+; ctl_write_n      ; output ; 0             ;
+; ctl_backup_n     ; output ; 0             ;
+; ctl_restore_n    ; output ; 0             ;
+; branch_op        ; output ; 0             ;
+; imm_signed       ; output ; 0             ;
+; ir_en            ; output ; 0             ;
+; pc_add_imm       ; output ; 0             ;
+; pc_en            ; output ; 0             ;
+; pc_sel_a         ; output ; 0             ;
+; pc_sel_imm       ; output ; 0             ;
+; pc_sel_ih        ; output ; 0             ;
+; rf_wren          ; output ; 0             ;
+; rf_retaddr [4:0] ; output ; 00000         ;
+; sel_addr         ; output ; 0             ;
+; sel_b            ; output ; 0             ;
+; sel_ctl          ; output ; 0             ;
+; sel_mem          ; output ; 0             ;
+; sel_pc           ; output ; 0             ;
+; sel_ra           ; output ; 0             ;
+; sel_rC           ; output ; 0             ;
+; read             ; output ; 0             ;
+; write            ; output ; 0             ;
+; op_alu [5:0]     ; output ; 000000        ;
++------------------+--------+---------------+
