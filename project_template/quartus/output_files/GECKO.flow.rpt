@@ -1,5 +1,5 @@
 Flow report for GECKO
-Sun Nov 26 14:45:50 2023
+Mon Nov 27 14:15:14 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov 26 14:45:47 2023          ;
+; Flow Status                        ; Successful - Mon Nov 27 14:15:14 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; GECKO                                          ;
 ; Top-level Entity Name              ; GECKO                                          ;
@@ -105,7 +105,21 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; 00:00:44     ; 1.0                     ; 5632 MB             ; 00:00:29                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4730 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.4                     ; 4845 MB             ; 00:00:01                           ;
-; Total                ; 00:00:56     ; --                      ; --                  ; 00:00:38                           ;
+; MIF/HEX Update       ; 00:00:01     ; 1.0                     ; 4738 MB             ; 00:00:00                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4712 MB             ; 00:00:01                           ;
+; MIF/HEX Update       ; 00:00:00     ; 1.0                     ; 4738 MB             ; 00:00:00                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4712 MB             ; 00:00:01                           ;
+; MIF/HEX Update       ; 00:00:01     ; 1.0                     ; 4738 MB             ; 00:00:00                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4712 MB             ; 00:00:01                           ;
+; MIF/HEX Update       ; 00:00:01     ; 1.0                     ; 4738 MB             ; 00:00:00                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4712 MB             ; 00:00:01                           ;
+; MIF/HEX Update       ; 00:00:00     ; 1.0                     ; 4738 MB             ; 00:00:00                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4709 MB             ; 00:00:01                           ;
+; MIF/HEX Update       ; 00:00:01     ; 1.0                     ; 4738 MB             ; 00:00:00                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4709 MB             ; 00:00:01                           ;
+; MIF/HEX Update       ; 00:00:00     ; 1.0                     ; 4738 MB             ; 00:00:00                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4709 MB             ; 00:00:01                           ;
+; Total                ; 00:01:07     ; --                      ; --                  ; 00:00:45                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,6 +132,20 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-K0JMBQS  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -128,6 +156,20 @@ quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 quartus_fit --read_settings_files=off --write_settings_files=off GECKO -c GECKO
 quartus_asm --read_settings_files=off --write_settings_files=off GECKO -c GECKO
 quartus_sta GECKO -c GECKO
+quartus_cdb GECKO -c GECKO --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+quartus_cdb GECKO -c GECKO --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+quartus_cdb GECKO -c GECKO --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+quartus_cdb GECKO -c GECKO --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+quartus_cdb GECKO -c GECKO --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+quartus_cdb GECKO -c GECKO --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+quartus_cdb GECKO -c GECKO --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 
 
 

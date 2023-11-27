@@ -34,7 +34,7 @@ isr_array:
 	.word 0
 	.word buttons_isr
 timer_isr:
-	stw zero, TIMER(zero) ; acknowledge interrupt
+	stw zero, TIMER+12(zero) ; acknowledge interrupt
 	ldw t0, LEDs+4(zero)
 	addi t0, t0, 1 ; increment counter2
 	stw t0, LEDs+4(zero)
@@ -58,9 +58,9 @@ main:
 	addi t0, zero, 1
 	wrctl status, t0 ; enable interrupts
 	addi t0, zero, 999 ; set the period of the timer to 1000 cycles
-	stw t0, TIMER+8(zero)
-	addi t0, zero, 7 ; start the timer:
-	stw t0, TIMER+4(zero) ; start + cont + ito
+	stw t0, TIMER+4(zero)
+	addi t0, zero, 11 ; start the timer:
+	stw t0, TIMER+8(zero) ; start + cont + ito
 	add t0, zero, zero ; init counter1
 main_loop:
 stw t0, LEDs+8(zero) ; display counter1
