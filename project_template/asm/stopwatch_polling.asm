@@ -20,19 +20,22 @@ main:
 
 timer_loop:
     ; delay for 100 ms
-    ori t3, zero, 0xB71B ; delay count (50 MHz * 100 ms = 5,000,000 cycles, but we divide by 10 because each loop iteration takes 10 cycles)
+    ori t3, zero, 0x7A12 ; delay count (50 MHz * 100 ms = 5,000,000 cycles, but we divide by 10 because each loop iteration takes 10 cycles)
 	slli t3,t3, 4
 delay_loop:
-	
     addi t3, t3, -1
+	add t0,zero,zero
+    bne t3,zero, delay_loop
+	
 	ldw t4, BUTTON+4(zero)
 	andi t4,t4,1
 	beq t4,zero, skip
 	call spend_time
-	addi a0, a0, 20 ; increment counter with spend_time time cost
+	addi a0, a0, 10 ; increment counter with spend_time time cost
 	skip:
+
 	stw zero, BUTTON+4(zero)
-    bne t3,zero, delay_loop
+
     ; call display function
 	addi sp, sp, -4
 	stw a0, 0(sp)
