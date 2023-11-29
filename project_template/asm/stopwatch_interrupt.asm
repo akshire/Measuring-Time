@@ -16,25 +16,25 @@ main:
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; DO NOT CHANGE ANYTHING ABOVE THIS LINE
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    
-    ; WRITE YOUR CONSTANT DEFINITIONS AND main HERE
-	addi sp, zero, RAM+0x1000 ; init the sp
+    addi sp, zero, RAM+0x1000 ; init the sp
 	addi t0, zero, 5
 	wrctl ienable, t0 ; enable timer + button irq
 	addi t0, zero, 1
 	wrctl status, t0 ; enable interrupts
-	addi t0, zero, 999 ; set the period of the timer to 1000 cycles
+	addi t0, zero, 0x0ff ; set the period of the timer to 1000 cycles
+	slli t0,t0,16
+	ori t0,t0,0xff ;0x0ff0000ff
 	stw t0, TIMER+4(zero)
 	addi t0, zero, 11 ; start the timer:
 	stw t0, TIMER+8(zero) ; start + cont + ito
-	add t0, zero, zero ; init counter1
-	main_loop:
-	stw t0, LEDs+8(zero) ; display counter1
-	addi t0, t0, 1 ; increment counter1
+	add s4, zero,zero ; init counter OFFICIAL
+main_loop:
+	add t0,t0,zero
+	add t0, t0, zero ; increment counter1
 	br main_loop
 
+;status et irq
 interrupt_handler:
-    ; WRITE YOUR INTERRUPT HANDLER HERE
 	addi sp, sp, -16 ; save to stack
 	stw t0, 0(sp)
 	stw s0, 4(sp)
@@ -65,28 +65,28 @@ isr_array:
 	.word buttons_isr
 timer_isr:
 	stw zero, TIMER+12(zero) ; acknowledge interrupt
-	addi sp, sp, -4
+	addi s4, s4, 1 ; increment counter
+	addi sp,sp,-4
 	stw ra, 0(sp)
-	ldw t0,TIMER(zero)
-	addi t0,t0,1
-	stw t0,TIMER(zero)
+	add a0,s4,zero
+	call display
 	ldw ra, 0(sp)
-	addi sp,sp,+4
 	ret
 buttons_isr:
-	ldw t1, LEDs(zero)
 	ldw t0, BUTTON+4(zero)
 	andi t0, t0, 1
-	beq t0,zero,skip
-	addi sp , sp, -4
-	stw ea, 0(sp)
+	beq t0,zero, next
+	addi sp,sp,-4
+	stw ea,4(sp)
+	stw ra,0(sp)
+	; ienable changer et PIE changer
 	call spend_time
-	ldw ea, 0(sp)
+	addi s4,s4,9
+	ldw ra, 0(sp)
 	addi sp,sp,4
-	skip:
+	next:
 	stw zero, BUTTON+4(zero) ; acknowledge interrupt
 	ret
-
 
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; DO NOT CHANGE ANYTHING BELOW THIS LINE

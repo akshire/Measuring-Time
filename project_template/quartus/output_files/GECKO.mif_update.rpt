@@ -1,5 +1,5 @@
 MIF/HEX Update report for GECKO
-Mon Nov 27 14:43:44 2023
+Wed Nov 29 14:56:35 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Mon Nov 27 14:43:44 2023 ;
+; MIF/HEX Update Status ; Successful - Wed Nov 29 14:56:35 2023 ;
 ; Revision Name         ; GECKO                                 ;
 ; Top-level Entity Name ; GECKO                                 ;
 ; Family                ; Cyclone IV E                          ;
@@ -59,14 +59,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime MIF/HEX Update
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Nov 27 14:43:44 2023
+    Info: Processing started: Wed Nov 29 14:56:35 2023
 Info: Command: quartus_cdb GECKO -c GECKO --update_mif
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (39024): Processed the following Memory Initialization File(s)
     Info (39025): Processed Memory Initialization File C:/Users/hubne/Desktop/computer_architecture/CompArch2/lab_4/project_template/quartus/ROM.hex File: C:/Users/hubne/Desktop/computer_architecture/CompArch2/lab_4/project_template/quartus/ROM.hex Line: 0
 Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4738 megabytes
-    Info: Processing ended: Mon Nov 27 14:43:44 2023
+    Info: Processing ended: Wed Nov 29 14:56:35 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
