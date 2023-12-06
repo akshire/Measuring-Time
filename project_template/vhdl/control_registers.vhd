@@ -21,20 +21,19 @@ end control_registers;
 architecture synth of control_registers is
     constant REG_STATUS : std_logic_vector := "000";
     constant REG_ESTATUS : std_logic_vector := "001";
-    -- constant REG_BSTATUS : std_logic_vector := "010";
+    
     constant REG_IENABLE : std_logic_vector := "011";
     constant REG_IPENDING : std_logic_vector := "100";
-    -- constant REG_CPUID : std_logic_vector := "101";
-    signal pie : std_logic; -- RW
-    signal epie : std_logic; -- RW
-    -- signal bpie : std_logic;
+   
+    signal pie : std_logic; 
+    signal epie : std_logic; 
+    
     signal ienable_reg : std_logic_vector(31 downto 0);
     signal ipending_reg : std_logic_vector(31 downto 0);
--- signal cpuid : std_logic_vector(31 downto 0);
 begin
     ipending <= '1' when (unsigned(ipending_reg) /= 0 and pie = '1') else '0';
     ipending_reg <= ienable_reg and irq;
-    -- read
+   
     process(address, pie, epie, ipending_reg, ienable_reg)
     begin
         rddata <= (others => '0');
@@ -50,7 +49,7 @@ begin
             when others =>
         end case;
     end process;
-    -- write
+  
     process(clk, reset_n)
     begin
         if (reset_n = '0') then

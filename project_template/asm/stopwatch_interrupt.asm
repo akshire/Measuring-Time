@@ -21,9 +21,9 @@ main:
 	wrctl ienable, t0 ; enable timer + button irq
 	addi t0, zero, 1
 	wrctl status, t0 ; enable interrupts
-	addi t0, zero, 0x0ff ; set the period of the timer to 1000 cycles
-	slli t0,t0,16
-	ori t0,t0,0xff ;0x0ff0000ff
+	addi t0, zero, 0x4d46 ; 
+	slli t0,t0,8
+	ori t0,t0,0x1E ;4D461E
 	stw t0, TIMER+4(zero)
 	addi t0, zero, 11 ; start the timer:
 	stw t0, TIMER+8(zero) ; start + cont + ito
@@ -45,27 +45,27 @@ interrupt_handler:
 ihandler_loop:
 	andi t0, s0, 1 ; mask on the next irq bit
 	beq t0, zero, ihandler_continue
-	ldw t0, isr_array(s1) ; load the corresponding routine address
-	callr t0 ; call the rountine
+	ldw t0, isr_array(s1)
+	callr t0
 ihandler_continue:
-	srli s0, s0, 1 ; shift the ipending vector
-	addi s1, s1, 4 ; point to the next routine address
+	srli s0, s0, 1
+	addi s1, s1, 4
 	bne s0, zero, ihandler_loop
 ihandler_return:
-	ldw t0, 0(sp) ; restore from stack
+	ldw t0, 0(sp)
 	ldw s0, 4(sp)
 	ldw s1, 8(sp)
 	ldw ra, 12(sp)
 	addi sp, sp, 16
-	addi ea, ea, -4 ; correction of the ea register
+	addi ea, ea, -4 
 	eret
 isr_array:
 	.word timer_isr
 	.word 0
 	.word buttons_isr
 timer_isr:
-	stw zero, TIMER+12(zero) ; acknowledge interrupt
-	addi s4, s4, 1 ; increment counter
+	stw zero, TIMER+12(zero)
+	addi s4, s4, 1
 	addi sp,sp,-4
 	stw ra, 0(sp)
 	add a0,s4,zero
@@ -85,7 +85,7 @@ buttons_isr:
 	ldw ra, 0(sp)
 	addi sp,sp,4
 	next:
-	stw zero, BUTTON+4(zero) ; acknowledge interrupt
+	stw zero, BUTTON+4(zero)
 	ret
 
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
