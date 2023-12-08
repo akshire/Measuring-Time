@@ -27,24 +27,20 @@ architecture synth of timer is
 	signal read_reg : std_logic;
 	signal address_reg : std_logic_vector(1 downto 0);
 	
-	-- status
-	signal run : std_logic; -- RO
-	signal timeout : std_logic; -- RW
+	signal run : std_logic; 
+	signal timeout : std_logic; 
 	
-	-- control
-	signal cont : std_logic; -- RW
-	signal ito : std_logic; -- RW
+	signal cont : std_logic;
+	signal ito : std_logic;
 	
-	--period
-	signal period : std_logic_vector(31 downto 0); -- RW
+	signal period : std_logic_vector(31 downto 0); 
 	
 	-- counter
-	signal counter : std_logic_vector(31 downto 0); -- RO
+	signal counter : std_logic_vector(31 downto 0);
 	
 begin
 	irq <= ito and timeout;
 	
-	-- address_reg
 	process(clk, reset_n)
 	begin
 		if (reset_n = '0') then
@@ -57,14 +53,11 @@ begin
 	end process;
 	
 	
-	-- read
 	process(read_reg, address_reg, run, timeout, cont, ito, period, counter)
 	begin
-		-- rddata is disconnected by default
 		rddata <= (others => 'Z');
 
 		if (read_reg = '1') then
-			-- during a read, rddata is set to 0 by default
 			rddata <= (others => '0');
 
 			case address_reg is
@@ -88,7 +81,6 @@ begin
 		end if;
 	end process;
 	
-	-- write and counter
 	process(clk, reset_n)
 	begin
 		if (reset_n = '0') then

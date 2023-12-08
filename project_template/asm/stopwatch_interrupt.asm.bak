@@ -73,8 +73,9 @@ timer_isr:
 	stw s4,4(sp)
 	add a0,s4,zero
 	;ajouter condition pour appeler display iff on est pas dans spendTime
-	beq
+	bne s7, zero, not_display
 	call display
+not_display:
 	ldw s4, 4(sp)
 	ldw ra, 0(sp)
 	addi sp,sp,8
@@ -87,11 +88,21 @@ buttons_isr:
 	stw ea,4(sp)
 	stw ra,0(sp)
 	addi s7, zero, 1
-	wrctl s7, ienable
-	wrctl s7,status
+	addi sp, sp,-8
+	rdctl t0,ienable
+	stw t0,0(sp)
+	rdctl t0,status
+	stw t0, 4(sp)
+	wrctl ienable, s7
+	wrctl status, s7
 	; ienable changer et PIE changer
 	call spend_time
 	add s7,zero,zero
+	ldw t0, 4(sp)
+	wrctl status, t0
+	ldw t0, 0(sp)
+	wrctl ienable, t0
+	addi sp,sp,8
 	ldw ra, 0(sp)
 	addi sp,sp,4
 	next:
