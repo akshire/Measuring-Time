@@ -35,11 +35,12 @@ main_loop:
 
 ;status et irq
 interrupt_handler:
-	addi sp, sp, -16 ; save to stack
+	addi sp, sp, -20 ; save to stack
 	stw t0, 0(sp)
 	stw s0, 4(sp)
 	stw s1, 8(sp)
 	stw ra, 12(sp)
+	stw ea, 16(sp)
 	rdctl s0, ipending ; read ipending
 	add s1, zero, zero ; index in the isr array
 ihandler_loop:
@@ -56,7 +57,8 @@ ihandler_return:
 	ldw s0, 4(sp)
 	ldw s1, 8(sp)
 	ldw ra, 12(sp)
-	addi sp, sp, 16
+	ldw ea, 16(sp)
+	addi sp, sp, 20
 	addi ea, ea, -4 
 	eret
 isr_array:
@@ -66,14 +68,16 @@ isr_array:
 timer_isr:
 	stw zero, TIMER+12(zero)
 	addi s4, s4, 1
-	addi sp,sp,-4
-    stw s4, 4(sp)
+	addi sp,sp,-8
 	stw ra, 0(sp)
+	stw s4,4(sp)
 	add a0,s4,zero
+	;ajouter condition pour appeler display iff on est pas dans spendTime
+	beq
 	call display
-    ldw s4, 4(sp)
+	ldw s4, 4(sp)
 	ldw ra, 0(sp)
-    addi sp, sp, 4
+	addi sp,sp,8
 	ret
 buttons_isr:
 	ldw t0, BUTTON+4(zero)
@@ -82,9 +86,12 @@ buttons_isr:
 	addi sp,sp,-4
 	stw ea,4(sp)
 	stw ra,0(sp)
+	addi s7, zero, 1
+	wrctl s7, ienable
+	wrctl s7,status
 	; ienable changer et PIE changer
 	call spend_time
-	addi s4,s4,9
+	add s7,zero,zero
 	ldw ra, 0(sp)
 	addi sp,sp,4
 	next:
