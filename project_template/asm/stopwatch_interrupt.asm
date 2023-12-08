@@ -67,10 +67,13 @@ timer_isr:
 	stw zero, TIMER+12(zero)
 	addi s4, s4, 1
 	addi sp,sp,-4
+    stw s4, 4(sp)
 	stw ra, 0(sp)
 	add a0,s4,zero
 	call display
+    ldw s4, 4(sp)
 	ldw ra, 0(sp)
+    addi sp, sp, 4
 	ret
 buttons_isr:
 	ldw t0, BUTTON+4(zero)
