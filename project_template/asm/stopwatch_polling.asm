@@ -31,7 +31,7 @@ delay_loop:
 	andi t4,t4,1
 	beq t4,zero, skip
 	call spend_time
-	addi a0, a0, 
+	addi a0, a0, 9 ;AAAAAAAAAAAAAAAA
 	skip:
 
 	stw zero, BUTTON+4(zero)

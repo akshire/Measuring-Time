@@ -15,12 +15,12 @@ stw t0, LFSR(zero)
 
 ; WRITE YOUR CODE AND CONSTANT DEFINITIONS HERE
 main:
-    addi sp, zero, RAM+0x1000 ; init the sp
-    addi a0, zero, 0 ; initialize timer register
+    addi sp, zero, RAM+0x1000
+    addi a0, zero, 0 
 
 timer_loop:
-    ; delay for 100 ms
-    ori t3, zero, 0x7A12 ; delay count (50 MHz * 100 ms = 5,000,000 cycles, but we divide by 10 because each loop iteration takes 10 cycles)
+ 
+    ori t3, zero, 0x7A12 
 	slli t3,t3, 4
 delay_loop:
     addi t3, t3, -1
@@ -31,19 +31,19 @@ delay_loop:
 	andi t4,t4,1
 	beq t4,zero, skip
 	call spend_time
-	addi a0, a0, 10 ; increment counter with spend_time time cost
+	addi a0, a0, 9 ;AAAAAAAAAAAAAAAA
 	skip:
 
 	stw zero, BUTTON+4(zero)
 
-    ; call display function
+  
 	addi sp, sp, -4
 	stw a0, 0(sp)
     call display
 	ldw a0, 0(sp)
 	addi sp,sp,4
-	addi a0, a0, 1 ; increment timer register
-    jmpi timer_loop ; repeat
+	addi a0, a0, 1 
+    jmpi timer_loop 
 
 
 
@@ -51,7 +51,7 @@ delay_loop:
 ; DO NOT CHANGE ANYTHING BELOW THIS LINE
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; ----------------- Common functions --------------------
-; a0 = tenths of second
+
 display:
     addi   sp, sp, -20
     stw    ra, 0(sp)
@@ -179,8 +179,7 @@ spend_time_loop:
 
     ret
 
-; v0 = a0 / a1
-; v1 = a0 % a1
+
 divide:
     add    v0, zero, zero
 divide_body:
